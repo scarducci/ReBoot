@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="indigo_dye_title">#124E78</color>
+    <color name="cream">#F0F0C9</color>
+    <color name="amber_subtitle_links">#F2BB05</color>
+    <color name="syracuse_red_button">#D74E09</color>
+    <color name="blood_red_">#6E0E0E</color>
+    
+    
+    <color name="light_cyan">#E0fBFC</color>
+    <color name="davys_gray">#595959</color>
+    <color name="pear">#CFD11A</color>
+    <color name="lilac">#BD93BD</color>
+</resources>

@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ReBoot" parent="Theme.AppCompat.Light">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/davys_gray</item>
+        <item name="colorPrimary">@color/lilac</item>
+        <item name="colorSecondary">@color/pear</item>
+    </style>
+
+    <style name="Theme.ReBoot" parent="Base.Theme.ReBoot" />
+</resources>

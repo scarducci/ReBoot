@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ReBoot</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">idlLuzNhPVoWK5rRfJCHsAvo7ylNxv2fOxm0XgPP</string>
+    <string name="back4app_client_key">QijfgFo6R76ZWdZLm0wuNDckZ2j7fdyM0yjTFj0G</string>
+</resources>

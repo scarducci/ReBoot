@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "835018173513",
+    "project_id": "reboot-9f387",
+    "storage_bucket": "reboot-9f387.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835018173513:android:09b48cbe9df1687d39a398",
+        "android_client_info": {
+          "package_name": "com.example.reboot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwZQw1QCMGGFAT8S0on29K2UfWQxZUo3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
