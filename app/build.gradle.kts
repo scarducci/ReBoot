@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.ir.backend.js.compile
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -11,7 +13,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.demarkelabs.android_parsesdk_kotlin"
+        applicationId = "com.example.reboot"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -51,9 +53,29 @@ dependencies {
     //noinspection GradleCompatible
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     //Parse SDK
-    implementation("com.github.parse-community:Parse-SDK-Android:parse:4.2.1")
+    var parseVersion = "4.2.0"
+    implementation("com.github.parse-community.Parse-SDK-Android:parse:$parseVersion")
+    // for Google login/signup support (optional)
+    implementation("com.github.parse-community.Parse-SDK-Android:google:$parseVersion")
+    // for Facebook login/signup support (optional)
+    implementation("com.github.parse-community.Parse-SDK-Android:facebook:$parseVersion")
+    // for Twitter login/signup support (optional)
+    implementation("com.github.parse-community.Parse-SDK-Android:twitter:$parseVersion")
+    // for FCM Push support (optional)
+    implementation("com.github.parse-community.Parse-SDK-Android:fcm:$parseVersion")
+    // for Kotlin extensions support (optional)
+    implementation("com.github.parse-community.Parse-SDK-Android:ktx:$parseVersion")
+    // for Kotlin coroutines support (optional)
+    implementation("com.github.parse-community.Parse-SDK-Android:coroutines:$parseVersion")
+    // for RxJava support (optional)
+    implementation("com.github.parse-community.Parse-SDK-Android:rxjava:$parseVersion")
+
     //JitPack Github package repository dependencies
-    implementation("com.github.User:Repo:Tag")
+    implementation("com.github.jitpack:android-example:1.0.1")
+
+    //Google login integration include
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
 }
+
 
 
