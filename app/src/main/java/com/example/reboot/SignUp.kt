@@ -3,9 +3,11 @@ package com.example.reboot
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.parse.ParseUser
 
 class SignUp : AppCompatActivity() {
@@ -31,6 +33,19 @@ class SignUp : AppCompatActivity() {
             val username = edtUserName.text.toString()
             val email = edtEmail.text.toString()
             val password = edtPassword.text.toString()
+
+            if(TextUtils.isEmpty(username)){
+                Toast.makeText(applicationContext, "Username is Required.", Toast.LENGTH_LONG).show()
+            }
+            else if(TextUtils.isEmpty(email)) {
+                Toast.makeText(applicationContext, "Email is Required.", Toast.LENGTH_LONG).show()
+            }
+            else if(TextUtils.isEmpty(password)){
+                Toast.makeText(applicationContext, "Password is Required.", Toast.LENGTH_LONG).show()
+            }
+            else {
+                signUp(username, email, password)
+            }
 
             signUp(username, email, password)
         }

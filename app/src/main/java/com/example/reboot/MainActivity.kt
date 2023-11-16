@@ -3,10 +3,12 @@ package com.example.reboot
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.parse.ParseObject
 import com.parse.ParseUser
 
@@ -33,7 +35,16 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setOnClickListener(){
             val email = edtEmail.text.toString()
             val password = edtPassword.text.toString()
-            login(email, password)
+
+            if(TextUtils.isEmpty(email)){
+                Toast.makeText(applicationContext, "Email is Required.", Toast.LENGTH_LONG).show()
+            }
+            else if(TextUtils.isEmpty(password)){
+                Toast.makeText(applicationContext, "Password is Required.", Toast.LENGTH_LONG).show()
+            }
+            else {
+                login(email, password)
+            }
         }
 
         tvSignUpLink.setOnClickListener(){
@@ -41,28 +52,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val firstObject = ParseObject("FirstClass")
-        firstObject.put("message", "Parse is now connected!")
-        firstObject.saveInBackground{
-            if(it != null){
-                it.localizedMessage?.let { message -> Log.e("MainActivity", message) }
-                print("Parse is now connected!")
-            }
-            else{
-                Log.d("MainActivity", "Object saved.")
-                print("Object Saved")
-            }
-        }
     }
 
     private fun login(email: String, password: String){
 
         ParseUser.logInInBackground(email, password, ({ user, e ->
             if(user != null){
-                //Logged in
+                Toast.makeText(applicationContext, "Welcome Back " + ParseUser.getCurrentUser().username + " !", Toast.LENGTH_LONG).show()
             }
             else{
-                //Login failed
+                Toast.makeText(applicationContext, "Username or Password Incorrect.", Toast.LENGTH_LONG).show()
             }
         }))
     }
