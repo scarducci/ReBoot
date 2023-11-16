@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/ivRebootLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/reboot_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/tvIntroduction"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivRebootLogo"
+        android:layout_marginTop="20dp"
+        android:text="Create Your Account with ReBoot"
+        android:layout_centerHorizontal="true"
+        android:autoSizeTextType="uniform"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        />
+    <EditText
+        android:id="@+id/edtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tvIntroduction"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:hint="Username"
+        android:background="@drawable/edt_background"
+        android:paddingLeft="13dp"
+        android:textColorHint="@color/lilac"/>
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edtUserName"
+        android:hint="Email"
+        android:textColorHint="@color/lilac"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/edt_background"
+        android:paddingLeft="13dp"/>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edtEmail"
+        android:hint="Password"
+        android:textColorHint="@color/lilac"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/edt_background"
+        android:paddingLeft="13dp"/>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        android:layout_below="@id/edtPassword"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_background"
+        android:layout_marginTop="13dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/tvLoginLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or Login"
+        android:layout_below="@+id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:linksClickable="true"
+        android:textSize="18dp"
+        android:layout_marginTop="13dp"/>
+
+    <ImageView
+        android:layout_width="79dp"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/google_icon"/>
+
+</RelativeLayout>
